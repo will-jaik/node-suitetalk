@@ -4,7 +4,7 @@ const BaseObject = require("../../../baseObject");
 
 class Record extends BaseObject {
 
-    constructor() {
+    constructor(type, name) {
         super();
         this.bodyFieldList = [];
         this.lineList = [];
@@ -13,6 +13,8 @@ class Record extends BaseObject {
         this.externalId = undefined;
         this.internalId = undefined;
         this._isCustomRecord = false;
+        this._type = type;
+        this._name = name;
     }
 
     _getSoapType() {

@@ -4,11 +4,11 @@ const BaseObject = require("../../../baseObject");
 
 class Field extends BaseObject {
 
-    constructor() {
+    constructor(fieldType) {
         super();
         this.field = undefined;
         this.value = undefined;
-        this._fieldType = undefined;
+        this._fieldType = fieldType;
     }
 
     _getSoapType() {

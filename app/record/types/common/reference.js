@@ -4,13 +4,13 @@ const BaseObject = require("../../../baseObject");
 
 class Reference extends BaseObject {
 
-    constructor() {
+    constructor(reference) {
         super();
         this.internalId = undefined;
         this.externalId = undefined;
         this.type = undefined;
         this.name = undefined;
-        this._reference = undefined;
+        this._reference = reference;
     }
 
     _getSoapType() {

@@ -16,6 +16,7 @@ const Types = {
     Opportunity: require("./opportunity"),
     Partner: require("./partner"),
     Record: require("./common/record"),
+    Reference: require("./common/reference"),
     RecordRef: require("./recordRef"),
     SalesOrder: require("./salesOrder"),
     Vendor: require("./vendor"),

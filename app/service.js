@@ -188,8 +188,8 @@ class Service {
         const soapObj = recordArr.map((record) => {
             return record.getNode();
         });
-        const upsert = denodeify(this.config.client.upsert);
-        return upsert(soapObj);
+        const upsertList = denodeify(this.config.client.upsertList);
+        return upsertList(soapObj);
     }
 
     /**

@@ -12,6 +12,7 @@ class Record extends BaseObject {
         this.customFields = undefined;
         this.externalId = undefined;
         this.internalId = undefined;
+        this.isInactive = undefined;
         this._isCustomRecord = false;
     }
 
@@ -25,6 +26,7 @@ class Record extends BaseObject {
         const attr = {
             "externalId": this.externalId,
             "internalId": this.internalId,
+            "isInactive": this.isInactive,
             "xsi:type": `${this._familyType}:${this._typeName}`,
         };
 
@@ -34,6 +36,10 @@ class Record extends BaseObject {
 
         if (!this.internalId) {
             delete attr.internalId;
+        }
+
+        if (this.isInactive === undefined) {
+            delete attr.isInactive;
         }
 
         return attr;
